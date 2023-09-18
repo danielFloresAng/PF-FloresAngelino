@@ -1,0 +1,765 @@
+// Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Dancing+Script&family=Poiret+One&family=Quicksand:wght@300;400;500;600;700&family=Red+Hat+Display:wght@400;600&family=Sacramento&display=swap');
+
+// SASS Import
+@import '_variables.scss';
+
+// General
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  body {
+    font-size: 16px;
+    font-family: $quick;
+    background: linear-gradient(to bottom, #E2EBF3, #876b9177 80%);
+    }
+}
+// Main, links, párrafos y headings
+.heading {
+  font-size: 3.8rem;
+  font-weight: 800;
+  padding: 0.8rem 0;
+  margin: 2rem 0;
+  font-family: $poi;
+  color: $main;
+}
+h2 {
+  font-family: $poi;
+  padding: 0.5rem;
+  font-size: 2.8rem;
+  margin: 1.6rem 0 1.1rem 0;
+  color: $main;
+  font-weight: 600;
+}
+a {
+  text-decoration: none;
+}
+.main-servicios, .products-main, .cotizaciones-main, .galeria-main, .main-contacto {
+  margin-top: 11rem !important;
+}
+
+// Links, párrafos y headings - mediaQueries
+@media only screen and (min-width: 576px) {
+  .main-servicios, .products-main, .cotizaciones-main, .galeria-main, .main-contacto {
+    margin-top: 13rem !important;
+  }
+  .heading {
+    font-size: 4.9rem;
+    margin-bottom: .8rem;
+  }
+  h2 {
+    font-size: 3.8rem;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .main-servicios, .products-main, .cotizaciones-main, .galeria-main, .main-contacto {
+    margin-top: 12rem !important;
+  }
+  .heading {
+    font-size: 6.5rem;
+  }
+  h2 {
+    font-size: 5rem;
+  }
+}
+// Section - Title
+.titulo-main {
+    margin-top: 10rem;
+    background-image: url(../img/Cupcakes\ m.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+    .container-title {
+      color: rgb(212, 212, 212);
+      background-color: #111003b6;
+      margin: 0;
+      padding-top: 4rem;
+      padding-bottom: 3rem;
+      .titulo {
+        font-family: $poi;
+        font-size: 3.2rem;
+      }
+      .eslogan {
+        font-family: $danc;
+        font-size: 3rem;
+      }
+    }
+}
+// Title - mediaQueries
+@media only screen and (min-width: 576px) {
+  .titulo-main {
+    margin-top: 12rem;
+      .container-title {
+        .titulo {
+          font-size: 3.9rem;
+      }
+        .eslogan {
+          font-size: 3.7rem;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 980px) {
+    .titulo-main {
+      margin-top: 8rem;
+      .container-title {
+        height: 22rem;
+        .titulo {
+          
+          font-size: 4.4rem;
+          }
+        .eslogan {
+          
+          font-size: 4.2rem;
+          }
+      }
+    }
+}
+// INDEX
+// Main
+.index-main {
+  .album-fotos {
+    .div-galeria {
+      height: 40rem;
+      max-width: 60%;
+      display: grid;
+      padding: 7px;
+      gap: 1%;
+      grid-template-areas: 
+      "foto1 foto1 foto2 foto2"
+      "foto3 foto3 foto4 foto4"
+      "foto5 foto5 foto6 foto6"
+      "foto7 foto7 foto8 foto8"
+      ;
+      .img-galeria {
+        border-radius: 5px;
+        background-size: cover;
+        background-position: center;
+        filter: grayscale(40%);
+        transition: all 0.6s;
+      }
+      .img-galeria:hover {
+        filter: grayscale(0%);
+        transform: scale(1.02);
+      }
+      .item1 {
+        background-image: url(../img/pexels-jess-bailey-designs-913136.jpg);
+        grid-area: foto1;
+      }
+      .item2 {
+          background-image: url(../img/Cake\ c.jpg);
+          grid-area: foto2;
+      }
+      .item3 {
+          background-image: url(../img/Cup\ c.jpg);
+          grid-area: foto3;
+      }
+      .item4 {
+          background-image: url(../img/Cookie\ c.jpg);
+          grid-area: foto4;
+      }
+      .item5 {
+          background-image: url(../img/pexels-gordon-ky-15505793.jpg);
+          grid-area: foto5;
+      }
+      .item6 {
+          background-image: url(../img/pexels-shvets-production-7525193.jpg);
+          grid-area: foto6;
+      }
+      .item7 {
+          background-image: url(../img/pexels-rodrigo-souza-2531546.jpg);
+          grid-area: foto7;
+      }
+      .item8 {
+          background-image: url(../img/pexels-los-muertos-crew-8478058.jpg);
+          grid-area: foto8;
+      }
+    }
+  }
+  .link-index-fotos {
+    font-size: 1.7rem;
+    font-style: italic;
+    font-weight: 575;
+    color: $secundary;
+    a {
+      text-decoration: underline;
+      color: $secundary;
+    }
+}
+  .index-article {
+    p {
+    line-height: normal;
+    font-size: 1.6rem;
+    text-align: center;
+    margin: .5rem auto;
+    padding: 1rem;
+    width: 80%;
+    }
+  }
+}
+// Main - mediaQueries
+@media only screen and (min-width: 660px) {
+  .index-main {
+    .album-fotos {
+      .div-galeria {
+        height: 65rem;
+        max-width: 70%;
+        padding: 7px;
+        grid-template-areas: 
+        "foto1 foto2 foto3 foto3"
+        "foto1 foto4 foto4 foto8"
+        "foto6 foto5 foto7 foto8"
+        ;
+      }
+    }
+    .link-index-fotos {
+      font-size: 1.9rem;
+      font-style: italic;
+      font-weight: 600;
+    }
+    .index-article {
+      p {
+      font-size: 1.8rem;
+      }  
+    }
+  }
+}
+
+// PRODUCTOS
+// Productos -  Main
+.products-main {
+  .div-products {
+    display: flex;
+    flex-direction: column;
+    .products-section {
+      .productos-image {
+        height: 16rem;
+        width: 16rem;
+        margin: 2rem auto;
+        border: solid #e2ebf3 8px;
+        border-radius: 50%;
+        background-size: cover;
+        background-position-y: center;
+        background-position-x: center;
+      }
+      #cupcakes{
+        background-image: url(../img/pexels-taryn-elliott-4099124.jpg);
+      }
+      #minicakes{
+        background-image: url(../img/pexels-sergio-arreola-14781509.jpg);
+      }
+      #pasteles{
+        background-image: url(../img/Cake\ c.jpg);
+      }
+      #galletas{
+        background-image: url(../img/Cookie\ c.jpg);
+      }
+      ul {
+        list-style: none;
+        margin-bottom: 3rem;
+        li {
+          font-size: 1.6rem;
+        }
+        .galletas-nota {
+          font-size: 1.3rem;
+          font-style: italic;
+          margin-top: 14px;
+        }
+      }
+    }
+  }
+}
+// Productos - Main - mediaQueries
+@media only screen and (min-width: 576px) {
+  .products-main {
+    .div-products {
+      flex-direction: row;
+      .products-section {
+        .productos-image {
+          height: 20rem;
+          width: 20rem;
+          border: solid #e2ebf3 10px;
+        }
+        ul {
+          margin-bottom: 4.5rem;
+          li {
+            font-size: 1.7rem;
+          }
+          .galletas-nota {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 980px) {
+  .products-main {
+    .div-products {
+      .products-section {
+        .productos-image {
+          height: 24rem;
+          width: 24rem;
+          border: solid #e2ebf3 13px;
+        }
+        ul {
+          li {
+            font-size: 1.9rem;
+          }
+          .galletas-nota {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}
+// SERVICIOS
+.main-servicios {
+  .servicios-section {
+    .fotos{
+      margin: .1rem auto;
+      padding: 5rem;
+      max-width: 60rem;
+    }
+    .fotos-servicios {
+      #img-diseno-1 {
+        background-image: url(../img/Cookies\ c.jpg);
+        grid-area: img-diseno-1;
+      }
+      #img-diseno-2 {
+        background-image: url(../img/pexels-jess-bailey-designs-853004.jpg);
+        grid-area: img-diseno-2;
+      }
+      #img-diseno-3 {
+        background-image: url(../img/pexels-merlin-lightpainting-11309253.jpg);
+        grid-area: img-diseno-3;
+      }
+      #img-diseno-4 {
+        background-image: url(../img/pexels-los-muertos-crew-8478058.jpg);
+        grid-area: img-diseno-4;
+      }
+    }
+    .fotos-eventos {
+      #img-even-1 {
+        background-image: url(../img/pexels-ibrahim-boran-903400.jpg);
+        grid-area: img-even-1;
+      }
+      #img-even-2 {
+        background-image: url(../img/pexels-deeana-arts-2418652.jpg);
+        grid-area: img-even-2;
+      }
+      #img-even-3 {
+        background-image: url(../img/pexels-sergio-arreola-14781509.jpg);
+        grid-area: img-even-3;
+      }
+    }
+  }
+}
+.foto-diseño {
+  border: solid .5px #49516D;
+  height: 16rem;
+  margin: 1rem auto;
+  border-radius: 7px;
+  background-size: cover;
+  background-position: center;
+}
+// Servicios - mediaQueries
+@media (min-width: 500px) {
+  .main-servicios {
+    .servicios-section {
+      .fotos-servicios{
+        // margin: .2rem auto;
+        // padding: 5rem;
+        // max-width: 60rem;
+        display: grid;
+        grid-template-areas: 
+        "img-diseno-1 img-diseno-2"
+        "img-diseno-3 img-diseno-4"
+        ;
+        gap: 1%;
+        // #img-diseno-1 {
+        //   background-image: url(../img/Cookies\ c.jpg);
+        //   grid-area: img-diseno-1;
+        // }
+        // #img-diseno-2 {
+        //   background-image: url(../img/pexels-jess-bailey-designs-853004.jpg);
+        //   grid-area: img-diseno-2;
+        // }
+        // #img-diseno-3 {
+        //   background-image: url(../img/pexels-merlin-lightpainting-11309253.jpg);
+        //   grid-area: img-diseno-3;
+        // }
+        // #img-diseno-4 {
+        //   background-image: url(../img/pexels-los-muertos-crew-8478058.jpg);
+        //   grid-area: img-diseno-4;
+        // }
+      }
+      .fotos-eventos {
+        display: grid;
+        grid-template-areas: 
+        "img-even-1 img-even-1"
+        "img-even-2 img-even-3"
+        ;
+        gap: 1%;
+        // #img-even-1 {
+        //   background-image: url(../img/pexels-ibrahim-boran-903400.jpg);
+        //   grid-area: img-even-1;
+        // }
+        // #img-even-2 {
+        //   background-image: url(../img/pexels-deeana-arts-2418652.jpg);
+        //   grid-area: img-even-2;
+        // }
+        // #img-even-3 {
+        //   background-image: url(../img/pexels-sergio-arreola-14781509.jpg);
+        //   grid-area: img-even-3;
+        // }
+      }
+    }
+  }
+  .foto-diseño {
+    
+    height: 21rem;
+    margin: 0;
+  }
+}
+
+// Cotizaciones button
+.cotizaciones-button {
+  margin:0 0 2rem 60%;
+  a {
+    background-color: $main;
+    color: $contrastTwo;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 12px;
+    padding: 3px 8px;
+    bottom: 30%;
+    right: 1%;
+    transition: .8s;
+  }
+  a:hover{
+    font-size: 13.2px;
+    color: #E2EBF3;
+    transform: scale(1.1)
+  }
+}
+/*  Cotizaciones button - mediaqueries */
+@media (min-width: 770px) {
+  .cotizaciones-button {
+    margin:0 0 2rem 60%;
+    a {
+      display: inline-block;
+      position: fixed;
+      .texto-cotizaciones {
+        display: block;
+      }
+    }
+  }
+}
+
+// CONTACTO
+// Contacto - Main
+.main-contacto {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 4rem;
+  .contacto-section { 
+    width: 80%;
+    margin: 1rem auto;
+    text-align: justify;
+    p {
+      text-align: left;
+      font-size: 1.7rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      a {
+        color: #876B91;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .mapa {
+    width: 95%;
+    height: 20rem;
+    margin: 4rem auto;
+    border: solid 4px #BFDB95;
+    border-radius: 10px;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  i {
+    margin-right: 1.5rem;
+  }
+}
+// Contacto - mediaQueries
+@media (min-width: 576px) {
+  .main-contacto {
+    width: 90%;
+    .contacto-section { 
+      p {
+        font-size: 2rem;
+      }
+    }
+    .mapa {
+      width: 95%;
+      height: 30rem;
+      border: solid 8px #BFDB95;
+    }
+  }
+}
+@media (min-width: 920px) {
+  .main-contacto {
+    .contacto-section { 
+      p {
+        font-size: 2.4rem;
+      }
+    }
+    .mapa {
+      width: 70%;
+      height: 40rem;
+    }
+  }
+}
+
+// COTIZACIONES
+// Cotizaciones - main 
+.cotizaciones-main {
+  margin: auto;
+  margin-bottom: 3rem;
+  padding: 0 2rem;
+  form {
+    background-color: #876b91;
+    padding: 3rem;
+    border-radius: 10px;
+    legend {
+      padding: 2rem;
+      border-style: none;
+      text-transform: uppercase;
+      font-family: $poi;
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: $white;
+    }
+    .input-cotizaciones {
+      margin-bottom: 1.4rem;
+      color: $white;
+      label {
+        display: block;
+        font-size: 1.6rem;
+        margin-bottom: .5rem;
+        text-align: left !important;
+      }
+      input, select {
+        width: 100%;
+        margin-bottom: 1.2rem;
+        height: 2.4rem;
+      }
+      textarea {
+        margin: 0 auto;
+        width: 100%;
+        height: 8rem;
+      }
+    }
+    .boton {
+      display: flex;
+      justify-content: flex-end;
+      input[type="submit"] {
+        color: $white;
+        text-transform: capitalize;
+        background-color: $main;
+        font-size: 1.9rem;
+        max-height: 40px;
+        font-weight: 500;
+        padding: 3px 2rem;
+        border-radius: 5px;
+        border: solid .3px $white;
+        transition: .2s;
+      }
+      input[type="submit"]:hover {
+        color: $main;
+        background-color: $white;
+        border: solid .1px $main;
+        font-size: 2rem;
+        font-weight: 400;
+      }
+    }    
+  }
+}
+
+// Cotizaciones - mediaQueries
+@media (min-width: 576px) {
+.cotizaciones-main {
+  width: 85%;
+  form {
+    legend {
+      font-size: 2.1rem;
+      padding: 1rem;
+    }
+    .input-cotizaciones {
+      label {
+        font-size: 2rem;
+      }
+      input, select {
+        margin-bottom: 1.8rem;
+        height: 3rem;
+      }
+    }
+  }
+}
+}
+@media (min-width: 800px) {
+  .cotizaciones-main {
+    width: 65%;
+    form {
+      fieldset {
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 2%;
+        legend {
+          font-size: 2.4rem;
+          padding: 1rem;
+          grid-column: span 2;
+        }
+        .input-cotizaciones {
+          label {
+            font-size: 2.2rem;
+          }
+          input, select {
+            margin-bottom: 1.3rem;
+          }
+          textarea {
+            grid-column: span 2;
+            width: 205%;
+          }
+        }
+        .boton {
+          margin-bottom: 6rem;
+          grid-column: span 2;
+        }    
+      }
+    }
+  }
+}
+
+// GALERIA
+// Galería - Main
+.galeria-main {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 80%;
+  height: 40rem;
+  .galeria-section {
+    padding: 1rem;
+    // margin: auto;
+    max-width: 95%;
+    height: 70rem;
+    display: grid;
+    // grid-template-columns: 1fr;
+    // grid-template-rows: repeat(8, 1fr);
+    grid-template-areas: 
+    "foto-a"
+    "foto-b"
+    "foto-c"
+    "foto-d"
+    "foto-f"
+    "foto-g"
+    "foto-h"
+    "foto-i"
+    ;
+    .fotos-galeria {
+      width: auto;
+      height: auto;
+    }
+    .fotos-galeria img{
+      // width: auto;
+      // height: 100%;
+      object-fit: cover;
+      // margin: 5px auto;
+      gap: 1%;
+      border-radius: 25px;
+      border: solid 2.5px $white;
+    }
+    .foto-a {
+      grid-area: foto-a;
+    }
+    .foto-b {
+      grid-area: foto-b;
+    }
+    .foto-c {
+      grid-area: foto-c;
+    }
+    .foto-d {
+      grid-area: foto-d;
+    }
+    .foto-f {
+      grid-area: foto-f;
+    }
+    .foto-g {
+      grid-area: foto-g;
+    }
+    .foto-h {
+      grid-area: foto-h;
+    }
+    .foto-i {
+      grid-area: foto-i;
+    }
+  }
+}
+// Galería - mediaQueries
+@media (min-width: 500px) {
+  .galeria-main {
+    .galeria-section {
+      display: grid;
+      gap: 5px;
+      grid-template-areas: 
+      "foto-a foto-b"
+      "foto-c foto-d"
+      "foto-f foto-g"
+      "foto-h foto-i"
+      ;
+      .fotos-galeria img {
+        margin: 0;
+        // width: 100%;
+        // height: 20rem;
+        background-position: center;
+      }
+    }
+  }
+}
+@media (min-width: 900px) {
+  .galeria-main {
+    margin-bottom: 5rem;
+    .galeria-section {
+      padding: 5rem;
+      width: 80%;
+      grid-template-areas: 
+      "foto-a foto-d foto-d foto-f"
+      "foto-a foto-d foto-d foto-f"
+      "foto-c foto-c foto-c foto-f"
+      "foto-g foto-h foto-b foto-b"
+      "foto-i foto-i foto-b foto-b"
+      ;
+      .fotos-galeria {
+        height: auto;
+      }
+      .fotos-galeria img{
+        height: 100%;
+      }
+    }
+  }
+}
+// SASS Import
+@import '_header-footer.scss';
+
